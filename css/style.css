@@ -1172,7 +1172,8 @@ html[dir="rtl"] .show-link i {
 }
 .item-date {
   background-color: rgba(0, 0, 0, 0.502);
-  width: 81px;
+  min-width: 81px;
+  padding-inline: 10px;
   height: 24px;
   border-radius: 12px;
   display: block;
@@ -1328,7 +1329,7 @@ html[dir="rtl"] .show-link i {
   padding: 75px 0;
   position: relative;
   overflow: hidden;
-  background-color: var(--main-color);
+  background-color: #fdfaf6;
 }
 .courses-section::after {
   content: url(../images/courses/courses-bg.png);
@@ -1345,11 +1346,11 @@ html[dir="ltr"] .courses-section::after {
   margin-bottom: 40px;
 }
 .courses-section .section-head {
-  color: var(--white-color);
+  color: #386465;
   text-align: start;
 }
 .courses-section .section-title-pargh {
-  color: #b7d8d9;
+  color: #386465;
 }
 .courses-slider {
   position: relative;
@@ -1417,7 +1418,7 @@ html[dir="ltr"] .courses-section::after {
 }
 .courses-name {
   display: inline-flex;
-  color: var(--white-color);
+  color: #386465;
   text-decoration: none !important;
   font-size: 16px;
   font-weight: 700;
@@ -1580,14 +1581,15 @@ html[dir="ltr"] .courses-section::after {
   justify-content: center;
   overflow: hidden;
   position: relative;
-  max-width: 164px;
-  max-height: 164px;
+  width: 164px;
+  height: 164px;
   margin: 0;
 }
 .partners-img {
   width: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  object-fit: contain;
 }
 .partners-figure:hover .partners-img {
   transform: scale(1.02);
@@ -1620,6 +1622,12 @@ html[dir="ltr"] .courses-section::after {
     display: -ms-flexbox;
     display: flex;
   }
+}
+@media (max-width: 768px) {
+ .partners-figure{
+  width: 100%;
+  height: 100%;
+ }
 }
 
 .partners-slider .swiper-btn:hover {
@@ -3546,8 +3554,8 @@ label.required::after {
 /*                   courses-page                      */
 .courses-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
   margin-bottom: 30px;
 }
 .courses-header .section-head {
@@ -5743,3 +5751,16 @@ html[dir="ltr"] .back-btn i {
     margin-left: 5px;
 }
 
+
+
+.time-check-group{
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 10px;
+}
+
+@media screen and ( max-width : 768px) {
+  .time-check-group{
+    grid-template-columns: repeat(2 , 1fr);
+  }
+}

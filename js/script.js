@@ -348,6 +348,7 @@ $(document).ready(function () {
 
   $('[data-toggle="tooltip"]').tooltip();
 
+
   const dateExists = document.getElementsByClassName("selector").length > 0;
   if (dateExists) {
     $(".selector").flatpickr({});
@@ -362,6 +363,8 @@ $(document).ready(function () {
       defaultDate: "today",
     });
   }
+
+
 
   $(".other-option input:radio").change(function () {
     if (this.checked) {
@@ -391,6 +394,8 @@ $(document).ready(function () {
     $(this).children().children(".bar--horizontal").toggleClass("is-active");
   });
 
+  
+
   // Input Tel
 
   if ($(".tel-input").length > 0) {
@@ -402,6 +407,8 @@ $(document).ready(function () {
       // separateDialCode: true,
     });
   }
+
+
 });
 //lazy load
 
