@@ -237,7 +237,8 @@ html[dir="ltr"] .progress-bar {
 }
 .first-btn,
 .second-btn {
-  width: 120px;
+  min-width: 120px;
+  padding-inline: 15px;
   height: 40px;
   border-radius: 20px;
   display: inline-flex;
