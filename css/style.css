@@ -1332,16 +1332,8 @@ html[dir="rtl"] .show-link i {
   overflow: hidden;
   background-color: #fdfaf6;
 }
-.courses-section::after {
-  content: url(../images/courses/courses-bg.png);
-  user-select: none;
-  position: absolute;
-  top: 0;
-  inset-inline-end: 0;
-}
-html[dir="ltr"] .courses-section::after {
-  transform: scaleX(-1);
-}
+
+
 .section-title-cont {
   text-align: start;
   margin-bottom: 40px;
@@ -1554,9 +1546,6 @@ html[dir="ltr"] .courses-section::after {
 @media (max-width: 991px) {
   .courses-section {
     padding: 50px 0;
-  }
-  .courses-section::after {
-    display: none;
   }
 }
 /*                      services-section                      */
